@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính Sách Quyền Riêng Tư — JunStore Packing CCTV</title>
+  <meta name="description" content="Chính sách quyền riêng tư của JunStore Packing CCTV, giải thích rõ ràng về phạm vi sử dụng dữ liệu và tích hợp Google Drive API.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📦</div>
+        <span>JunStore CCTV</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="index.html#features">Tính năng</a></li>
+        <li><a href="index.html#gdrive">Google Drive Backup</a></li>
+        <li><a href="privacy.html" class="active">Chính sách quyền riêng tư</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Content Container -->
+  <main class="container">
+    <div class="policy-container">
+      <div class="policy-header">
+        <h1>Chính Sách Quyền Riêng Tư</h1>
+        <div class="meta">Cập nhật lần cuối: Ngày 15 tháng 10 năm 2026 • Áp dụng cho: JunStore Packing CCTV</div>
+      </div>
+
+      <div class="policy-body">
+        <p>
+          Chào mừng bạn đến với <strong>JunStore Packing CCTV</strong> ("chúng tôi", "ứng dụng"). Chúng tôi cam kết bảo vệ tối đa quyền riêng tư và dữ liệu cá nhân của người dùng. Tài liệu Chính sách Quyền riêng tư này giải thích chi tiết cách ứng dụng thu thập, xử lý, lưu trữ và bảo vệ dữ liệu khi bạn cài đặt và sử dụng ứng dụng, đặc biệt là khi kết nối với dịch vụ đám mây <strong>Google Drive</strong>.
+        </p>
+
+        <div class="callout-box">
+          <strong>Tuyên bố cốt lõi:</strong> JunStore Packing CCTV là ứng dụng máy tính nội bộ phục vụ việc ghi hình và giám sát đóng gói đơn hàng. Ứng dụng chỉ lưu trữ dữ liệu trên máy tính của bạn và tài khoản Google Drive cá nhân do bạn chỉ định. Chúng tôi <strong>tuyệt đối không thu thập, không bán và không chia sẻ</strong> dữ liệu hoặc video của bạn cho bất kỳ bên thứ ba nào.
+        </div>
+
+        <h2>1. Dữ Liệu Ứng Dụng Thu Thập & Xử Lý</h2>
+        <p>Để thực hiện các chức năng cốt lõi của hệ thống giám sát đóng gói, ứng dụng xử lý các loại dữ liệu sau hoàn toàn trên môi trường máy tính cục bộ của bạn:</p>
+        <ul>
+          <li><strong>Video ghi hình đóng gói:</strong> Các đoạn video ngắn được ghi từ camera bàn đóng gói (camera toàn cảnh EZVIZ) và camera quét phiếu gửi hàng (camera USB).</li>
+          <li><strong>Mã vận đơn / Mã đơn hàng:</strong> Chuỗi ký tự mã vạch quét từ phiếu gửi hàng nhằm định danh phiên đóng gói (ví dụ: đơn hàng Shopee, TikTok Shop, Lazada, SPX...).</li>
+          <li><strong>Mốc thời gian và thông tin phiên:</strong> Thời điểm bắt đầu, thời điểm kết thúc ghi hình, thời lượng video và kích thước tệp tin để quản lý lịch sử đóng gói.</li>
+        </ul>
+
+        <h2>2. Tích Hợp Google Drive & Quyền Truy Cập (OAuth 2.0)</h2>
+        <p>Ứng dụng cung cấp tính năng tùy chọn cho phép người dùng tự động sao lưu video đóng gói lên Google Drive để giải phóng dung lượng ổ cứng cục bộ.</p>
+
+        <h3>Phạm vi quyền được yêu cầu (OAuth Scope)</h3>
+        <p>Chúng tôi tuân thủ nghiêm ngặt nguyên tắc quyền tối thiểu (Least Privilege). Ứng dụng chỉ yêu cầu duy nhất một phạm vi quyền:</p>
+        <div class="callout-box">
+          <code>https://www.googleapis.com/auth/drive.file</code>
+          <p style="margin-top: 8px; margin-bottom: 0;">
+            <strong>Ý nghĩa quyền:</strong> Chỉ xem, tạo mới, tải lên và quản lý <em>các tệp tin hoặc thư mục do chính ứng dụng JunStore Packing CCTV tạo ra</em> trong Google Drive của bạn.
+          </p>
+        </div>
+
+        <h3>Cam kết không truy cập dữ liệu ngoài phạm vi</h3>
+        <ul>
+          <li>Ứng dụng <strong>KHÔNG CÓ QUYỀN</strong> và <strong>HOÀN TOÀN KHÔNG THỂ</strong> đọc, xem, sửa đổi, chia sẻ hoặc xóa bất kỳ tệp tin, hình ảnh, tài liệu cá nhân nào khác có sẵn trên Google Drive của bạn ngoài các video đóng hàng do ứng dụng tải lên.</li>
+          <li>Ứng dụng <strong>KHÔNG</strong> truy cập danh bạ, email, lịch, tệp bảng tính hay bất kỳ dịch vụ Google nào khác của bạn.</li>
+        </ul>
+
+        <h2>3. Mục Đích Sử Dụng Dữ Liệu Từ Google Drive</h2>
+        <p>Quyền truy cập Google Drive được sử dụng cho các mục đích duy nhất sau:</p>
+        <ol style="margin-left: 24px; margin-bottom: 20px;">
+          <li style="margin-bottom: 8px;"><strong>Tải lên và sao lưu video:</strong> Tự động tải các tệp video đã hoàn tất lên thư mục Google Drive riêng biệt được tổ chức theo ngày và mã đơn hàng.</li>
+          <li style="margin-bottom: 8px;"><strong>Xác minh an toàn:</strong> Kiểm tra kích thước tệp và mã băm toàn vẹn (MD5) trên Drive trước khi cho phép giải phóng tệp video trên máy tính nhằm tránh mất mát dữ liệu.</li>
+          <li style="margin-bottom: 8px;"><strong>Truy xuất theo yêu cầu (On-Demand):</strong> Tải lại video tạm thời từ Drive khi bạn cần xem lại hoặc tải video ghép hai góc quay phục vụ khiếu nại sàn thương mại điện tử.</li>
+        </ol>
+
+        <h2>4. Tuân Thủ Chính Sách Dữ Liệu Người Dùng Của Google API</h2>
+        <p>
+          Việc sử dụng và chuyển giao thông tin nhận được từ Google API sang bất kỳ ứng dụng nào khác của JunStore Packing CCTV sẽ tuân thủ nghiêm ngặt <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">Chính sách Dữ liệu Người dùng Dịch vụ Google API</a>, bao gồm các yêu cầu về <strong>Sử dụng Có Giới hạn (Limited Use)</strong>:
+        </p>
+        <ul>
+          <li>Chúng tôi không sử dụng dữ liệu người dùng nhận được qua Google API để quảng cáo.</li>
+          <li>Chúng tôi không cho phép con người đọc dữ liệu này, trừ khi được bạn đồng ý rõ ràng vì mục đích hỗ trợ kỹ thuật bảo mật, hoặc theo yêu cầu của pháp luật.</li>
+          <li>Dữ liệu Google API <strong>tuyệt đối không</strong> được sử dụng để huấn luyện hoặc phát triển các mô hình trí tuệ nhân tạo (AI/ML models).</li>
+        </ul>
+
+        <h2>5. Lưu Trữ, Bảo Mật Dữ Liệu & Không Chia Sẻ Bên Thứ Ba</h2>
+        <ul>
+          <li><strong>Lưu trữ mã truy cập:</strong> Mã truy cập (Access Token & Refresh Token) được tạo qua quy trình OAuth 2.0 PKCE và được lưu trữ cục bộ trên máy chủ nội bộ của bạn.</li>
+          <li><strong>Không chuyển giao cho bên thứ ba:</strong> Chúng tôi không chuyển giao, bán, cho thuê hoặc thương mại hóa bất kỳ thông tin nào của bạn cho bất kỳ đơn vị quảng cáo, môi giới dữ liệu hoặc bên thứ ba nào.</li>
+        </ul>
+
+        <h2>6. Quyền Thu Hồi & Xóa Dữ Liệu Của Người Dùng</h2>
+        <p>Bạn luôn nắm toàn quyền kiểm soát dữ liệu và quyền truy cập của mình:</p>
+        <ul>
+          <li><strong>Ngắt kết nối ngay trong ứng dụng:</strong> Bạn có thể nhấn nút "Ngắt kết nối Google Drive" trong trang Cài đặt của ứng dụng bất cứ lúc nào. Khi đó, toàn bộ token xác thực trên máy tính sẽ bị xóa sạch ngay lập tức.</li>
+          <li><strong>Thu hồi quyền từ tài khoản Google:</strong> Bạn có thể thu hồi quyền truy cập của ứng dụng bất kỳ lúc nào tại trang quản lý tài khoản Google của mình: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">Google Account Permissions</a>.</li>
+          <li><strong>Quản lý tệp video trên Drive:</strong> Vì tệp video nằm trên Google Drive cá nhân của bạn, bạn có thể xem, tải xuống, di chuyển hoặc xóa tệp bất kỳ lúc nào trực tiếp trên giao diện Google Drive.</li>
+        </ul>
+
+        <h2>7. Thay Đổi Chính Sách</h2>
+        <p>
+          Chúng tôi có thể cập nhật Chính sách Quyền riêng tư này khi bổ sung tính năng mới hoặc để đáp ứng các quy định pháp lý. Mọi thay đổi sẽ được cập nhật công khai tại trang web này với ngày cập nhật mới nhất.
+        </p>
+
+        <h2>8. Liên Hệ Hỗ Trợ</h2>
+        <p>
+          Nếu bạn có bất kỳ câu hỏi, thắc mắc hoặc yêu cầu nào liên quan đến Chính sách Quyền riêng tư hoặc việc xử lý dữ liệu của JunStore Packing CCTV, vui lòng liên hệ với chúng tôi qua:
+        </p>
+        <ul>
+          <li><strong>Đơn vị phát triển:</strong> JunStore Development Team</li>
+          <li><strong>Mã nguồn & Báo cáo:</strong> <a href="https://github.com/tienduy1403/junstore-cctv-info" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">https://github.com/tienduy1403/junstore-cctv-info</a></li>
+          <li><strong>Email hỗ trợ:</strong> <a href="mailto:tienduy1403@gmail.com" style="color: var(--primary); text-decoration: underline;">tienduy1403@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          JunStore Packing CCTV
+          <p>Hệ thống hỗ trợ đóng gói và lưu trữ video thông minh</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="privacy.html">Chính sách quyền riêng tư</a>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 JunStore Packing CCTV. Tất cả quyền được bảo lưu.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
